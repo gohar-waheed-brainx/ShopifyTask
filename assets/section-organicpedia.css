@@ -1,0 +1,339 @@
+
+.organicpedia-background {
+    height: auto;
+    position: relative;
+}
+
+.organicpedia-background-image-wrapper {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    z-index: 1;
+}
+
+.organicpedia-content-container, .organicpedia-sec2-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the content is positioned relative to the background */
+    z-index: 1;
+    width: 976px;
+    margin: 2rem auto;
+}
+
+.organicpedia-content, .organicpedia-sec2-content {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.organicpedia-title, .porganicpedia-sec2-title {
+    font-size: 32px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+}
+
+.organicpedia-headline, .porganicpedia-sec2-headline {
+    font-size: 19px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-top: -17px;
+    width: 94rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.organicpedia-headline-2 {
+    font-size: 19px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 91rem;
+}
+
+.organicpedia-button-container {
+    margin-top: 0;
+}
+
+.organicpedia-button {
+    width: 379px;
+    height: 50px;
+    /* border: 1px solid transparent; */
+    box-shadow: none;
+    border: none;
+    background-color: var(--homepage-color-red);
+    border-radius: 5px;
+    color: white;
+    font-weight: 700 !important;
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: normal;
+    cursor: pointer;
+    margin-bottom: 9rem;
+}
+
+@media screen and (max-width: 749px) {
+    .organicpedia-background-image-wrapper {
+        top: 0;
+        left: 0;
+    }
+    /* .users-served-content {
+        text-align: left;
+    } */
+    .organicpedia-title {
+        font-size: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 366px;
+    }
+    .organicpedia-content-container {
+        width: auto;
+    }
+    .organicpedia-headline, .organicpedia-headline-2 {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50rem;
+        padding-left: 8rem;
+        padding-right: 8rem;
+    }
+    .organicpedia-button {
+        width: 347px;
+        font-size: 13px;
+        height: 45px;
+        font-weight: 800;
+        margin-bottom: 16rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+    .organicpedia-background-image-wrapper {
+        top: -1%;
+        left: 20%;
+    }
+    .organicpedia-title {
+        font-size: 24px;
+    }
+    .organicpedia-content-container {
+        width: auto;
+    }
+    .organicpedia-headline, .organicpedia-headline-2 {
+        font-size: 16px;
+        width: 77rem;
+    }
+    .organicpedia-button {
+        width: 326px;
+        font-size: 13px;
+        height: 45px;
+        font-weight: 800;
+    }
+}
+
+.oragnicpedia-bg-2 {
+    background: var(--image-background);
+    height: auto;
+}
+
+.porganicpedia-sec2-title, .porganicpedia-sec2-headline {
+    color: white;
+}
+
+.mobile-decoration-image img {
+    display: none;
+}
+
+.organicpedia-left-decoration-image, .organicpedia-right-decoration-image {
+  position: relative;
+}
+
+.organicpedia-right-decoration-image img {
+    position: absolute;
+    z-index: 1;
+    top: -43rem;
+    right: 0;
+}
+
+.organicpedia-left-decoration-image img {
+    top: -22rem;
+    position: relative;
+}
+
+
+.organicpedia-decoration-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.organicpedia-sec2-content {
+    margin-top: -49rem;
+}
+
+.organicpedia-sec2-special-text {
+    transform: rotate(-3.13deg);
+    display: inline-block;
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--special-text);
+}
+
+.organicpedia-sec2-images {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: -10rem;
+}
+
+.organicpedia-sec2-images-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.organicpedia-sec2-content-image-wrapper {
+    position: relative;
+}
+
+.organicpedia-sec2-content-heading {
+    font-size: 20px;
+    color: white;
+    letter-spacing: normal;
+    margin: 0 auto;
+    text-align: center;
+    width: 35rem;
+}
+
+.organicpedia-sec2-button-container {
+    margin-top: 5rem;
+}
+
+.organicpedia-sec2-button {
+    width: 378px;
+    height: 50px;
+    /* border: 1px solid transparent; */
+    box-shadow: none;
+    border: none;
+    background-color: var(--homepage-color-red);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600 !important;
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+
+.organicpedia-sec2-subtitle-container {
+    margin-top: 1rem;
+}
+
+.organicpedia-sec2-subtitle #text {
+    margin-left: 3px;
+}
+
+.organicpedia-sec2-subtitle-container {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.organicpedia-sec2-subtitle {
+    font-size: 11px;
+    letter-spacing: normal;
+    color: white;
+    font-weight: 700 !important;
+}
+
+
+@media screen and (max-width: 749px) {
+    .organicpedia-left-decoration-image, .organicpedia-right-decoration-image {
+        display: none;
+    }
+    .mobile-decoration-image {
+        position: relative;
+        text-align: center;
+    }
+    .mobile-decoration-image img {
+        display: inline-block;
+        position: relative;
+        top: -18rem;
+    }
+    .organicpedia-sec2-content {
+        margin-top: -19rem;
+    }
+    .organicpedia-sec2-content-container {
+        width: auto;
+    }
+    .porganicpedia-sec2-title {
+        font-size: 24px;
+        width: 27rem;
+        margin: 2rem auto;
+        line-height: 27px;
+    }
+    .organicpedia-sec2-special-text {
+        margin-bottom: -2rem;
+        line-height: normal;
+    }
+    .porganicpedia-sec2-headline {
+        font-size: 15px;
+        margin: 2rem auto;
+        width: 56rem;
+        padding: 0px 10rem;
+    }
+    .organicpedia-sec2-images {
+        margin-top: 0;
+    } 
+    .organicpedia-sec2-content-image-wrapper img {
+        width: 343px;
+        height: 233px;
+    }
+    .organicpedia-sec2-content-heading {
+        width: 91%;
+        font-size: 17px;
+    }
+    .organicpedia-sec2-button {
+        width: 349px;
+        font-size: 15px;
+        height: 45px;
+        padding: 14px;
+    }
+    .organicpedia-sec2-subtitle {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+    .organicpedia-sec2-content-container {
+        width: auto;
+    }
+    .organicpedia-left-decoration-image img, .organicpedia-right-decoration-image img  {
+        width: 150px;
+    }
+    .porganicpedia-sec2-title {
+        font-size: 28px;
+    }
+    .porganicpedia-sec2-headline {
+        font-size: 18px;
+    }
+    .porganicpedia-sec2-headline {
+        font-size: 15px;
+        margin: 2rem auto;
+        width: 74rem;
+    }
+    .organicpedia-headline {
+        font-size: 18px;
+    }
+    .organicpedia-headline-2 {
+        font-size: 17px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 82rem;
+    }
+}
+
+
+

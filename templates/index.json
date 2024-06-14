@@ -1,1 +1,452 @@
-{"sections":{"image_banner":{"type":"image-banner","blocks":{"heading":{"type":"heading","settings":{"heading":"Browse our latest products","heading_size":"h0"}},"button":{"type":"buttons","settings":{"button_label_1":"Shop all","button_link_1":"shopify:\/\/collections\/all","button_style_secondary_1":true,"button_label_2":"","button_link_2":"","button_style_secondary_2":false}}},"block_order":["heading","button"],"settings":{"image_overlay_opacity":40,"image_height":"large","desktop_content_position":"bottom-center","show_text_box":false,"desktop_content_alignment":"center","color_scheme":"scheme-3","image_behavior":"none","mobile_content_alignment":"center","stack_images_on_mobile":false,"show_text_below":false}},"featured_collection":{"type":"featured-collection","settings":{"title":"Featured products","heading_size":"h2","description":"","show_description":false,"description_style":"body","collection":"all","products_to_show":8,"columns_desktop":4,"full_width":false,"show_view_all":true,"view_all_style":"solid","enable_desktop_slider":false,"color_scheme":"scheme-1","image_ratio":"adapt","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"quick_add":"none","columns_mobile":"2","swipe_on_mobile":false,"padding_top":44,"padding_bottom":36}}},"order":["image_banner","featured_collection"]}
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Coffee Routine!",
+            "heading_size": "h0",
+            "special_text": "Perfect"
+          }
+        },
+        "text_3ntC6X": {
+          "type": "text",
+          "settings": {
+            "text": "Discover your tailored at home coffee products & routine as we are your",
+            "text_style": "body",
+            "bold_text": "100% FREE Coffee Concierge!"
+          }
+        },
+        "buttons_8mCH7b": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "BROWSE ALL PRODUCTS  →",
+            "button_link_1": "shopify:\/\/collections\/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "TAKE YOUR FREE SURVEY NOW  →",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_secondary_2": false,
+            "Ratings_Text": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)",
+            "text_icon_width": 20,
+            "text_icon_height": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text_3ntC6X",
+        "buttons_8mCH7b"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_9.svg",
+        "image_2": "shopify:\/\/shop_images\/Group_164633_a877a117-8b12-4c59-a53f-61537a6ec24c.png",
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "desktop_content_position": "top-left",
+        "show_text_box": false,
+        "desktop_content_alignment": "left",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "testimonials_camwpw": {
+      "type": "testimonials",
+      "blocks": {
+        "column_eAeQyn": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164755.png",
+            "block_heading": "~ KIM G.",
+            "headline_1": "“SIMPLE PERFECT GRIND FOR YOUR LIKING!”",
+            "headline_2": "“This grinder does such a great job of controlling the type of grind you prefer. If you are looking for something quick and easy this is probably not what you want. This is part of the artistic process of brewing the perfect cup to your liking. Tastes a little arm\/wrist workout while your water is brewing. It is simple and easy to use as long as you know it’s not quick. Perfect for comping\/traveling also.”",
+            "rating_text": "4.9\/5.00 ( 1171 Reviews )",
+            "image_2": "shopify:\/\/shop_images\/Mask_group_1.png"
+          }
+        },
+        "column_T6nPeV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164755.png",
+            "block_heading": "~ KIM G.",
+            "headline_1": "“SIMPLE PERFECT GRIND FOR YOUR LIKING!”",
+            "headline_2": "“This grinder does such a great job of controlling the type of grind you prefer. If you are looking for something quick and easy this is probably not what you want. This is part of the artistic process of brewing the perfect cup to your liking. Tastes a little arm\/wrist workout while your water is brewing. It is simple and easy to use as long as you know it’s not quick. Perfect for comping\/traveling also.”",
+            "rating_text": "4.9\/5.00 ( 1171 Reviews )",
+            "image_2": "shopify:\/\/shop_images\/Mask_group_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "column_eAeQyn",
+        "column_T6nPeV"
+      ],
+      "settings": {
+        "testimonials_background_bg_image": "shopify:\/\/shop_images\/Group_164618.svg",
+        "title": "Testimonials From 6,000,000+ Coffee Lovers",
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
+    },
+    "featured_collection_QDDaNr": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Try Our Best Sellers",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "coffee-collection",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "standard",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 56,
+        "padding_bottom": 48
+      }
+    },
+    "take_survey_6UqfXq": {
+      "type": "take-survey",
+      "settings": {
+        "banner-text": "TRY FREE SURVEY",
+        "heading": "Transforming Ordinary Coffee Rituals Into Daily Experiences...",
+        "special_text": "Extraordinary",
+        "subtitle-text": "Wishing you had someone to walk you through <strong>EVERY<\/strong> element of your coffee experience?",
+        "button_label": "TAKE FREE SURVEY   →",
+        "button_link": "",
+        "subtitle-text-2": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)",
+        "margin_top": 56,
+        "margin_bottom": 56
+      }
+    },
+    "coffee_subscription_Qwnbef": {
+      "type": "coffee-subscription",
+      "settings": {
+        "coffee_sub_bg_img": "shopify:\/\/shop_images\/Group_164618.svg",
+        "collection": "coffee-collection",
+        "subtitle_icon": "shopify:\/\/shop_images\/Group_44.svg",
+        "subtitle_heading": "COFFEE SUBSCRIPTION",
+        "heading": "Thrill Your Taste Buds With Ethically Sourced, Hyper-Fresh Beans On Repeat",
+        "text": "<p>OrganicCafe coffees are always organically grown, ethically sourced, and free of additives and pesticides. Each bean is roasted to a bespoke recipes and <strong>shipped out within two hours of roast<\/strong> for maximum freshness and aromas. At every touchpoint, we intend to empower you to transform your favourite coffee ritual into an extraordinary daily experience - because you deserve nothing less.<\/p>",
+        "margin_top": 60,
+        "margin_bottom": 60
+      }
+    },
+    "video_ATm4bQ": {
+      "type": "video",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "enable_video_looping": true,
+        "video": "shopify:\/\/files\/videos\/-418e-4c76-a5fd-6a7cf02df632.mp4",
+        "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+        "description": "Java Presse Coffee Video",
+        "full_width": true,
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_YyQRz3": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_G9ErTj": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_3.png"
+          }
+        },
+        "column_Anc8Rw": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_4.png"
+          }
+        },
+        "column_wC4yiR": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "column_YKP8UU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_1.png"
+          }
+        },
+        "column_zXBVXt": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_2.png"
+          }
+        },
+        "column_EtVbQ4": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/download_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "column_G9ErTj",
+        "column_Anc8Rw",
+        "column_wC4yiR",
+        "column_YKP8UU",
+        "column_zXBVXt",
+        "column_EtVbQ4"
+      ],
+      "settings": {
+        "title": "Recommended By",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 32
+      }
+    },
+    "quality_column_aJPPkC": {
+      "type": "quality-column",
+      "blocks": {
+        "column_6MXpiC": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "AMAZING COFFEE"
+          }
+        },
+        "column_nEc9Ve": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "FRESHLY ROASTED"
+          }
+        },
+        "column_hyBVXX": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "BEST BREWING GUIDE"
+          }
+        },
+        "column_g9TAU6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "IMPACT-DRIVEN COFFEE SOURCING"
+          }
+        },
+        "column_LAFWaf": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "EARTH-FRIENDLY PROCESSING"
+          }
+        },
+        "column_jNNJBp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/lets-icons_check-fill.svg",
+            "title": "BESPOKE ROASTING FOR EVERY BEAN"
+          }
+        }
+      },
+      "block_order": [
+        "column_6MXpiC",
+        "column_nEc9Ve",
+        "column_hyBVXX",
+        "column_g9TAU6",
+        "column_LAFWaf",
+        "column_jNNJBp"
+      ],
+      "settings": {
+        "columns_desktop": 6,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "2",
+        "swipe_on_mobile": true,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "organipedia_gcTaNB": {
+      "type": "organipedia",
+      "blocks": {
+        "column_KbpJDa": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164800.png",
+            "block-heading": "Empowering Farmers In South America"
+          }
+        },
+        "column_rdz4Jm": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164802.png",
+            "block-heading": "First All-Women Co-Op In Guatemala"
+          }
+        },
+        "column_r6thr9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164599.png",
+            "block-heading": "Providing Rural Farmers An Alternative To Predatory “Coyotes”"
+          }
+        }
+      },
+      "block_order": [
+        "column_KbpJDa",
+        "column_rdz4Jm",
+        "column_r6thr9"
+      ],
+      "settings": {
+        "organicpedia_background_bg_image": "shopify:\/\/shop_images\/Group_164618.svg",
+        "title": "OrganicCafe - For Exceptional Coffee Content",
+        "headline-text-1": "With the right know-how, it’s easy to up your coffee game and transform your daily cup into an extraordinary experience.",
+        "headline-text-2": "We created OrganicPedia with this goal in mind - creating a go-to resource for rich, intentional content that elevates your awareness of all things coffee. From choosing beans, and tasting coffee (to everything in between), OrganicPedia is here to prove that coffee mastery can be fun, easy, and rewarding.",
+        "button_label": "VISIT OUR ORGANICPEDIA →",
+        "button_link": "",
+        "organicpedia_left-decoration-image": "shopify:\/\/shop_images\/Group.svg",
+        "organicpedia_right-decoration-image": "shopify:\/\/shop_images\/Group_1.svg",
+        "mobile-decoration-image": "shopify:\/\/shop_images\/Group_2.svg",
+        "sec2-title": "Creating Beyond The Bean.",
+        "sec2-headline": "Your daily cup makes a huge difference to the communities that grew this coffee. From empowering farmers in South America to adopt environmentally friendly practices, to helping the first all-women co-op in Guatemala access healthcare, our mission hinges on one fundamental idea: when we care, happiness flows and everyone wins. Including you.",
+        "sec2-special-text": "\"Joy\"",
+        "sec2_button_label": "SEE HOW YOU CAN MAKE IMPACT →",
+        "sec2_button_link": "",
+        "sec2_subtitle-text": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)",
+        "margin_top": 28,
+        "margin_bottom": 0
+      }
+    },
+    "product_annoucements_qrBJaB": {
+      "type": "product-annoucements",
+      "blocks": {
+        "column_X4kCRk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164649.png",
+            "block-heading": "The Best Gear",
+            "block-text": "The tools you use are just as important as the way you use them. Get your new best gears now!",
+            "button_label": "SHOP BEST GEARS →",
+            "button_link": ""
+          }
+        },
+        "column_qK3HVe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Group_164647.png",
+            "block-heading": "Best Coffee Beans",
+            "block-text": "It is all about the bean. Without it we literally don't have coffee. Shop best coffee beans now!",
+            "button_label": "SHOP BEST COFFEE BEANS →",
+            "button_link": ""
+          }
+        },
+        "column_YakfXe": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rectangle_11.png",
+            "block-heading": "BREWING GUIDE",
+            "block-text": "The brewing process can be hard. We simply that for you in every way. Learn more about brewing.",
+            "button_label": "GET FREE BREWING GUIDES→",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_X4kCRk",
+        "column_qK3HVe",
+        "column_YakfXe"
+      ],
+      "settings": {
+        "product_annoucement_bg_image": "shopify:\/\/shop_images\/Group_164618.svg",
+        "title": "ORGANICCAFE - For Exceptional Coffee Content",
+        "headline-text-1": "With the right know-how, it’s easy to up your coffee game and transform your daily cup into an extraordinary experience.",
+        "headline-text-2": "We created OrganicPedia with this goal in mind - creating a go-to resource for rich, intentional content that elevates your awareness of all things coffee. From choosing beans, and tasting coffee (to everything in between), OrganicPedia is here to prove that coffee mastery can be fun, easy, and rewarding.",
+        "button_label": "Button label",
+        "button_link": "",
+        "margin_top": 36,
+        "margin_bottom": 52
+      }
+    },
+    "users_served_eHT6WQ": {
+      "type": "users-served",
+      "blocks": {
+        "column_EqznQL": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4.png",
+            "block-heading": "1 M+",
+            "block-text": "Ground 1,000,000+\u2028lbs of Coffee"
+          }
+        },
+        "column_qbaywN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4.png",
+            "block-heading": "6 M+",
+            "block-text": "Serviced 6,000,000+ Coffee Lovers"
+          }
+        },
+        "column_EJwHer": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_4.png",
+            "block-heading": "500K",
+            "block-text": "Sold 500k Coffee Grinders"
+          }
+        }
+      },
+      "block_order": [
+        "column_EqznQL",
+        "column_qbaywN",
+        "column_EJwHer"
+      ],
+      "settings": {
+        "bg-image": "shopify:\/\/shop_images\/Group_164618.png",
+        "title": "Organic Café Have Served..",
+        "headline-text": "Our journey has led us grinding over a <strong>million pounds of coffee<\/strong>, learning and experiencing everything we can about brewing and translating our findings into easy to follow content.",
+        "button_label": "LEARN MORE ABOUT US →",
+        "button_link": "",
+        "subtitle-text": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)",
+        "margin_top": 36,
+        "margin_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "testimonials_camwpw",
+    "featured_collection_QDDaNr",
+    "take_survey_6UqfXq",
+    "coffee_subscription_Qwnbef",
+    "video_ATm4bQ",
+    "multicolumn_YyQRz3",
+    "quality_column_aJPPkC",
+    "organipedia_gcTaNB",
+    "product_annoucements_qrBJaB",
+    "users_served_eHT6WQ"
+  ]
+}

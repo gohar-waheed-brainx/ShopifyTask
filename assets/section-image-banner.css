@@ -1,3 +1,10 @@
+:root {
+  --image-background : #075D57;
+  --special-text: #DEB126;
+  --text-color: #FFFFFF;
+  --homepage-color-red: #EF4444;
+  --second-button-color : #034b46;
+}
 .banner {
   display: flex;
   position: relative;
@@ -15,6 +22,98 @@
   transform: perspective(0);
 }
 
+.banner__heading {
+  margin-bottom: 0;
+  font-size: 63px;
+  letter-spacing: normal;
+  line-height: 58px;
+}
+
+.special-text {
+  transform: rotate(-12.13deg);
+  display: inline-block;
+  font-weight: 400;
+  font-size: 96px;
+  color: var(--special-text);
+  margin-bottom: -22px;
+  position: relative;
+  z-index: -1;
+}
+
+.banner__text {
+  font-size: 20px;
+  color: var(--text-color);
+  letter-spacing: normal;
+}
+
+.banner-button {
+  width: 481px;
+  height: 50px;
+  /* border: 1px solid transparent; */
+  box-shadow: none;
+  border: none;
+  background-color: var(--homepage-color-red);
+  border-radius: 5px;
+  color: white;
+  font-weight: 800;
+  padding: 16px;
+  font-size: 16px;
+  letter-spacing: normal;
+}
+
+.banner-button-second {
+  background-color: var(--second-button-color);
+  font-weight: 400;
+}
+
+.rating-section {
+  font-size: 12px;
+  color: var(--text-color);
+  letter-spacing: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.ratings-text {
+  margin-left: 5px;
+}
+
+.star-icon {
+  color: var(--special-text);
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.icon-wrapper img.rating-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: auto; /* Ensure the width is controlled by the attribute */
+  height: auto; /* Ensure the height is controlled by the attribute */
+}
+
+.banner-button::after {
+  box-shadow: none;
+}
+
+.text-bold-word {
+  font-weight: bold;
+}
+
+.banner__box .banner__heading + * {
+  margin-top: 1rem;
+}
+
+.banner__buttons {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  max-width: 48rem;
+  word-break: break-word;
+}
+
 @media only screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__box {
     text-align: right;
@@ -22,6 +121,42 @@
 
   .banner--content-align-mobile-left .banner__box {
     text-align: left;
+  }
+  .banner__heading {
+    font-size: 42px;
+    margin: 0 auto;
+    width: 35rem;
+    line-height: 47px;
+  }
+  .special-text {
+    font-size: 65px;
+    z-index: 1;
+  }
+  .banner__text {
+    font-size: 14px;
+    margin: 0 auto;
+    width: 35rem;
+  }
+  .banner-button {
+    width: auto;
+  }
+  .rating-section {
+    font-size: 11px;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: center;
+  }
+  .header_content {
+    padding: 9rem 1rem !important;
+  }
+
+  .banner_coffee_bundle_wrapper img {
+    height: 43rem !important;
+    /* width: 35rem !important; */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1rem;
   }
 }
 
@@ -37,7 +172,32 @@
   .banner--content-align-left.banner--desktop-transparent .banner__box,
   .banner--content-align-right.banner--desktop-transparent .banner__box,
   .banner--medium.banner--desktop-transparent .banner__box {
-    max-width: 68rem;
+    max-width: 52rem;
+  }
+  .banner__heading {
+    font-size: 42px;
+    width: 35rem;
+    line-height: 43px;
+  }
+  .special-text {
+    font-size: 65px;
+  }
+  .banner__text {
+    font-size: 14px;
+    width: 35rem;
+  }
+  .banner-button {
+    width: 338px;
+  }
+  .rating-section {
+    font-size: 11px;
+  }
+  .banner__media-image-half {
+    height: 80% !important;
+    top: 5rem !important;
+  }
+  .banner__media-half {
+    width: 55% !important;
   }
 }
 
@@ -59,7 +219,7 @@
 
   .banner--medium.banner--mobile-bottom:not(.banner--adapt) .banner__media,
   .banner--medium.banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) > .banner__media {
-    height: 34rem;
+    height: 40rem;
   }
 
   .banner--large.banner--mobile-bottom:not(.banner--adapt) .banner__media,
@@ -164,6 +324,7 @@
   left: 0;
   top: 0;
   width: 100%;
+  background: var(--image-background);
 }
 
 .banner__media-half {
@@ -202,7 +363,7 @@
     width: 100%;
   }
 
-  .banner--stacked .banner__media-half + .banner__media-half {
+  .second-half {
     order: 1;
   }
 }
@@ -245,6 +406,7 @@
   .banner--stacked:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
     position: absolute;
     height: auto;
+    margin-top: 29rem;
   }
 
   .banner--stacked.banner--adapt:not(.banner--mobile-bottom) .banner__content {
@@ -278,7 +440,7 @@
 
 @media screen and (min-width: 750px) {
   .banner__content {
-    padding: 5rem;
+    padding: 5rem 1.5rem;
   }
 
   .banner__content--top-left {
@@ -339,7 +501,7 @@
 }
 
 .banner__box {
-  padding: 4rem 1.5rem;
+  padding: 4rem 1rem;
   position: relative;
   height: fit-content;
   align-items: center;
@@ -359,7 +521,7 @@
   }
 
   .banner--desktop-transparent .banner__box {
-    padding: 4rem 0;
+    padding: 8rem 0;
     background: transparent;
     max-width: 89rem;
     border: none;
@@ -427,28 +589,6 @@
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .banner__box {
-    max-width: 90rem;
-  }
-}
-
-.banner__heading {
-  margin-bottom: 0;
-}
-
-.banner__box .banner__heading + * {
-  margin-top: 1rem;
-}
-
-.banner__buttons {
-  display: inline-flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  max-width: 45rem;
-  word-break: break-word;
-}
-
 @media screen and (max-width: 749px) {
   .banner--content-align-mobile-right .banner__buttons--multiple {
     justify-content: flex-end;
@@ -488,5 +628,50 @@
   .banner--desktop-transparent .inline-richtext a:hover,
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .banner__heading {
+    font-size: 57px;
+    width: 100%;
+    line-height: 59px;
+  }
+
+  .special-text {
+    font-size: 88px;
+  }
+
+  .banner__text {
+    font-size: 18px;
+    width: 90%;
+  }
+
+  .banner-button {
+    width: 430px;
+  }
+  
+  .rating-section {
+    font-size: 12px;
+  }
+
+  .banner__media-image-half {
+    height: 90% !important;
+    top: 22px !important;
+  }
+
+  .banner__content {
+    padding: 5rem 3rem;
+  }
+  .banner_coffee_bundle_wrapper img {
+    height: 585px !important;
+    width: 749px !important;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .banner__box {
+    max-width: 90rem;
   }
 }

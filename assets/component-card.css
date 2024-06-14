@@ -5,6 +5,17 @@
   text-decoration: none;
 }
 
+.card_wrapper_width {
+  width: 93%;
+}
+
+.card__heading__text {
+  font-size: 19px !important;
+  color: var(--homepage-text-color) !important;
+  letter-spacing: normal !important;
+}
+
+
 .card {
   text-decoration: none;
   text-align: var(--text-alignment);
@@ -44,7 +55,7 @@
 .card--standard .card__inner {
   position: relative;
   box-sizing: border-box;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   border: var(--border-width) solid rgba(var(--color-foreground), var(--border-opacity));
 }
 
@@ -247,6 +258,14 @@
   .grid--2-col-tablet-down .card__content quick-add-bulk .quantity {
     width: auto;
   }
+
+  .card_wrapper_width {
+    width: 97%;
+  }
+
+  .card__heading__text {
+    font-size: 14px !important;
+  }
 }
 
 .card-information quantity-popover volume-pricing {
@@ -265,8 +284,8 @@
 
 @media screen and (min-width: 750px) {
   .card__information {
-    padding-bottom: 1.7rem;
-    padding-top: 1.7rem;
+    /* padding-bottom: 1.7rem;
+    padding-top: 1.7rem; */
   }
 }
 

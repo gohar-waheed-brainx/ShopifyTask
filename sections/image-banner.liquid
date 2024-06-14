@@ -56,7 +56,7 @@
   class="banner banner--content-align-{{ section.settings.desktop_content_alignment }} banner--content-align-mobile-{{ section.settings.mobile_content_alignment }} banner--{{ section.settings.image_height }}{% if section.settings.stack_images_on_mobile and section.settings.image != blank and section.settings.image_2 != blank %} banner--stacked{% endif %}{% if section.settings.image_height == 'adapt' and section.settings.image != blank %} banner--adapt{% endif %}{% if section.settings.show_text_below %} banner--mobile-bottom{%- endif -%}{% if section.settings.show_text_box == false %} banner--desktop-transparent{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
 >
   {%- if section.settings.image != blank -%}
-    <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner__media media second-half{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
         if section.settings.image_2 != blank
@@ -88,7 +88,7 @@
     </div>
   {%- endif -%}
   {%- if section.settings.image_2 != blank -%}
-    <div class="banner__media media{% if section.settings.image != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="banner__media media banner_coffee_bundle_wrapper{% if section.settings.image != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
         assign image_height_2 = section.settings.image_2.width | divided_by: section.settings.image_2.aspect_ratio
         if section.settings.image != blank
@@ -116,19 +116,38 @@
     </div>
   {%- endif -%}
   <div class="banner__content banner__content--{{ section.settings.desktop_content_position }} page-width{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-    <div class="banner__box content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
+    <div class="banner__box header_content content-container content-container--full-width-mobile color-{{ section.settings.color_scheme }} gradient">
       {%- for block in section.blocks -%}
         {%- case block.type -%}
           {%- when 'heading' -%}
+            {%- assign special_text = block.settings.special_text -%}
+            {%- assign heading_words = block.settings.heading | split: ' ' -%}
+            {%- assign modified_heading = '' -%}
+      
+            {%- for word in heading_words -%}
+              {%- if forloop.index == 2 -%}
+                {%- assign modified_heading = modified_heading | append: ' <span class="special-text">' | append: special_text | append: '</span> ' | append: word -%}
+              {%- else -%}
+                {%- assign modified_heading = modified_heading | append: ' ' | append: word -%}
+              {%- endif -%}
+            {%- endfor -%}
+      
+            {%- if heading_words.size < 2 -%}
+              {%- assign modified_heading = heading_words[0] | append: ' ' | append: special_text -%}
+            {%- endif -%}
+      
             <h2
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              {{ modified_heading | strip }}
             </h2>
           {%- when 'text' -%}
+            {% assign boldWord = block.settings.bold_text %}
+            {% assign text = block.settings.text %}
+            {% assign newText = text | append: " " | append: '<span class="text-bold-word">' | append: boldWord | append: '</span>' %}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-              <p>{{ block.settings.text }}</p>
+              <p>{{ newText }}</p>
             </div>
           {%- when 'buttons' -%}
             <div
@@ -142,7 +161,7 @@
                   {% else %}
                     href="{{ block.settings.button_link_1 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button banner-button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_1 | escape -}}
                 </a>
@@ -154,10 +173,30 @@
                   {% else %}
                     href="{{ block.settings.button_link_2 }}"
                   {% endif %}
-                  class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
+                  class="button banner-button banner-button-second{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
                   {{- block.settings.button_label_2 | escape -}}
                 </a>
+              {%- endif -%}
+              {%- if block.settings.Ratings_Text != blank -%}
+                <div class="rating-section flex-container">
+                  {%- if block.settings.text_icon != blank -%}
+                   <span class="icon-wrapper"> {{
+                      block.settings.text_icon
+                      | image_url: width: block.settings.text_icon_width
+                      | image_tag:
+                        width: block.settings.text_icon_width,
+                        height: block.settings.text_icon_width,
+                        fetchpriority: fetch_priority
+                    }}
+                   </span>
+                  {%- else -%}
+                    {% for i in (1..5) %}
+                      <span class="star-icon">&#9733;</span>
+                    {% endfor %}
+                  {%- endif -%}
+                  <span class= "ratings-text">{{ block.settings.Ratings_Text }}</span>
+                </div>
               {%- endif -%}
             </div>
         {%- endcase -%}
@@ -370,7 +409,7 @@
         {
           "type": "inline_richtext",
           "id": "heading",
-          "default": "Image banner",
+          "default": "YOUR PERFECT COFFEE ROUTINE!",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
         },
         {
@@ -392,6 +431,12 @@
           ],
           "default": "h1",
           "label": "t:sections.all.heading_size.label"
+        },
+        {
+          "type": "text",
+          "id": "special_text",
+          "label": "Special Text",
+          "info": "Enter the special text for the heading."
         }
       ]
     },
@@ -425,6 +470,12 @@
           ],
           "default": "body",
           "label": "t:sections.image-banner.blocks.text.settings.text_style.label"
+        },
+        {
+          "type": "text",
+          "id": "bold_text",
+          "label": "Bold Text",
+          "info": "Enter the bold text to highlight."
         }
       ]
     },
@@ -468,6 +519,38 @@
           "id": "button_style_secondary_2",
           "default": false,
           "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+        },
+        {
+          "type": "text",
+          "id": "Ratings_Text",
+          "label": "Ratings Text",
+          "info": "How many people liked your product?"
+        },
+        {
+          "type": "image_picker",
+          "id": "text_icon",
+          "label": "Icon",
+          "info": "Upload an image to use as the icon."
+        },
+        {
+          "type": "range",
+          "id": "text_icon_width",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon Width",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "text_icon_height",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "px",
+          "label": "Icon Height",
+          "default": 20
         }
       ]
     }

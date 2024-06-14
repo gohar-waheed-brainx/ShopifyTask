@@ -1,1 +1,173 @@
-{"sections":{"main":{"type":"main-product","blocks":{"vendor":{"type":"text","settings":{"text":"{{ product.vendor }}","text_style":"uppercase"}},"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","swatch_shape":"circle"}},"quantity_selector":{"type":"quantity_selector","settings":{}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":true,"show_gift_card_recipient":true}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{"share_label":"Share"}}},"block_order":["vendor","title","price","variant_picker","quantity_selector","buy_buttons","description","share"],"settings":{"enable_sticky_info":true,"color_scheme":"scheme-1","media_size":"large","constrain_to_viewport":true,"media_fit":"contain","gallery_layout":"stacked","media_position":"left","image_zoom":"lightbox","mobile_thumbnails":"hide","hide_variants":true,"enable_video_looping":false,"padding_top":36,"padding_bottom":12}},"related-products":{"type":"related-products","settings":{"heading":"You may also like","heading_size":"h2","products_to_show":4,"columns_desktop":4,"color_scheme":"scheme-1","image_ratio":"square","image_shape":"default","show_secondary_image":true,"show_vendor":false,"show_rating":false,"columns_mobile":"2","padding_top":36,"padding_bottom":28}}},"order":["main","related-products"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "quality_coffee_section_kUGcDP": {
+      "type": "quality-coffee-section",
+      "blocks": {
+        "column_YEddCx": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_6.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_6_1.png",
+            "block-heading": "Top 1% Of The World’s Coffee",
+            "block-text": "Specialty Grade, Single Origin, And Hand-Picked At Peak Ripeness For The Highest Quality."
+          }
+        },
+        "column_A4fCDJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_7.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_7_1.png",
+            "block-heading": "A New Coffee Each Month",
+            "block-text": "These Coffees Aren’t On The Shelves, From Malawi To Myanmar, India To Ecuador, And More."
+          }
+        },
+        "column_rJX9cJ": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_8.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_8_1.png",
+            "block-heading": "Roasted Fresh To Order",
+            "block-text": "And Always Roasted To Your Preference. Maximum Freshness, Maximum Flavor."
+          }
+        },
+        "column_LYHr7c": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_8_2.png",
+            "image_mobile": "shopify:\/\/shop_images\/image_8_3.png",
+            "block-heading": "Delivered On Your Schedule",
+            "block-text": "Skip Or Change Your Delivery Date At Any Time, And Set A Schedule That Works For You."
+          }
+        }
+      },
+      "block_order": [
+        "column_YEddCx",
+        "column_A4fCDJ",
+        "column_rJX9cJ",
+        "column_LYHr7c"
+      ],
+      "settings": {
+        "headline-text": "Why 100,000 Coffee Drinkers Have Switched To OrganicCoffee",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "how_we_impact_PzC8pt": {
+      "type": "how-we-impact",
+      "settings": {
+        "how_we_impact_bg_img": "shopify:\/\/shop_images\/Group_164618.svg",
+        "subtitle_icon": "shopify:\/\/shop_images\/Group_44.svg",
+        "subtitle_heading": "HOW WE IMPACT",
+        "heading": "Your Daily Cup Makes A Huge Difference To The Communities That Grew This Coffee.",
+        "text1": "<p>From empowering farmers in South America to adopt environmentally friendly practices, to helping the first all-women co-op in Guatemala access healthcare, our mission hinges on one fundamental idea: <strong>when we care, happiness flows and everyone wins. Including you.<\/strong><\/p>",
+        "text2": "<p>To date, the OrganicCoffee family has helped 20+ coffee farmers chase a brighter future.<\/p>",
+        "button_label": "SEE HOW YOU CAN MAKE IMPACT →",
+        "button_link": "shopify:\/\/collections\/all",
+        "rating_text": "4.9\/5.00  (Serviced 6,000,000+ Coffee Lovers)",
+        "margin_top": 40,
+        "margin_bottom": 52
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "quality_coffee_section_kUGcDP",
+    "how_we_impact_PzC8pt",
+    "related-products"
+  ]
+}

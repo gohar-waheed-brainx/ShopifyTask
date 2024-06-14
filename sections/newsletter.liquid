@@ -15,15 +15,41 @@
   }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
+<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}" style= "overflow: hidden">
   <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'heading' %}
+          {% if block.settings.subtitle_icon != blank %}
+            {{
+              block.settings.subtitle_icon
+              | image_url: width: 27
+              | image_tag: fetchpriority: fetch_priority
+            }}
+          {% endif %}
+          {% if block.settings.subtitle_heading != blank %}
+            <h4 class = "subtitle_heading">
+              {{ block.settings.subtitle_heading }}
+            </h4>
+          {% endif %}
+      {% endcase %}
+    {% endfor %}
+    {% if section.settings.newsletter-bg-img != blank %}
+      <div class= "newsletter__wrapper__bg__container">
+        {{
+          section.settings.newsletter-bg-img
+          | image_url: width: 430
+          | image_tag: fetchpriority: fetch_priority
+        }}
+      </div>
+    {% endif %}
     {%- for block in section.blocks -%}
       {%- case block.type -%}
         {%- when '@app' -%}
           {% render block %}
         {%- when 'heading' -%}
           <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="inline-richtext newsletter-heading {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -34,7 +60,7 @@
           </h2>
         {%- when 'paragraph' -%}
           <div
-            class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+            class="newsletter__subheading newsletter_subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
             {{ block.shopify_attributes }}
             {% if settings.animations_reveal_on_scroll %}
               data-cascade
@@ -45,7 +71,7 @@
           </div>
         {%- when 'email_form' -%}
           <div {{ block.shopify_attributes }}>
-            {% form 'customer', class: 'newsletter-form' %}
+            {% form 'customer', class: 'newsletter-form newsletter-form-container' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
               <div
                 class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -54,12 +80,12 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <div class="field">
+                <div class="field input_field">
                   <input
                     id="NewsletterForm--{{ section.id }}"
                     type="email"
                     name="contact[email]"
-                    class="field__input"
+                    class="field__input newsletter-field"
                     value="{{ form.email }}"
                     aria-required="true"
                     autocorrect="off"
@@ -75,17 +101,21 @@
                     placeholder="{{ 'newsletter.label' | t }}"
                     required
                   >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
+                  <label class="field__label newsletter_field_lable" for="NewsletterForm--{{ section.id }}">
+                    <div class = "message-icon-lable-wrapper">
+                      <span style= "margin-top: 2px">{% render 'icon-message' %}</span>
+                      <span class= "newsletter_field_lable_text">Your Email Address</span>
+                    </div>
                   </label>
                   <button
                     type="submit"
-                    class="newsletter-form__button field__button"
+                    class="newsletter__field__button"
                     name="commit"
                     id="Subscribe"
                     aria-label="{{ 'newsletter.button_label' | t }}"
                   >
-                    {% render 'icon-arrow' %}
+                    <span class="desktop-text">SUBSCRIBE NOW →</span>
+                    <span class="mobile-text">SUBSCRIBE →</span>
                   </button>
                 </div>
                 {%- if form.errors -%}
@@ -130,6 +160,11 @@
       "default": "scheme-1"
     },
     {
+      "type": "image_picker",
+      "id": "newsletter-bg-img",
+      "label": "Background Image"
+    },
+    {
       "type": "checkbox",
       "id": "full_width",
       "default": true,
@@ -170,6 +205,17 @@
       "name": "t:sections.newsletter.blocks.heading.name",
       "limit": 1,
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "subtitle_icon",
+          "label": "Subtitle Icon"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "subtitle_heading",
+          "default": "Subtitle Heading",
+          "label": "Subtitle Heading"
+        },
         {
           "type": "inline_richtext",
           "id": "heading",

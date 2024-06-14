@@ -1,0 +1,167 @@
+
+.take-survey-container {
+    overflow-x: hidden !important;
+}
+
+.take-survey-background-container {
+    background: var(--image-background);
+    height: auto;
+    position: relative;
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.take-survey-banner-text {
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: var(--second-button-color);
+    width: 173px;
+    height: 51px;
+    text-align: center;
+    padding: 1.3rem;
+    font-size: 13px;
+    letter-spacing: normal;
+}
+
+.take-survey-banner-wrapper {
+    position: absolute;
+    top: 3%;
+    right: 0%;
+    z-index: 1;
+}
+
+.take-survey-content {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.take-survey-content-heading {
+    font-size: 32px;
+    color: white;
+    letter-spacing: normal;
+    width: 62rem;
+    margin: 0 auto;
+    line-height: normal;
+}
+
+.take-servey-heading-special-text {
+    transform: rotate(-3.13deg);
+    display: inline-block;
+    font-weight: 400;
+    font-size: 50px;
+    color: var(--special-text);
+    margin-top: -8px;
+}
+
+.take-survey-content-subtitle {
+    font-size: 20px;
+    letter-spacing: normal;
+    color: white;
+    font-weight: 500;
+    width: 51rem;
+    margin: 0 auto;
+}
+
+.take-survey-content-button {
+    width: 379px;
+    height: 50px;
+    /* border: 1px solid transparent; */
+    box-shadow: none;
+    border: none;
+    background-color: white;
+    border-radius: 5px;
+    color: var(--image-background);
+    font-weight: 800 !important;
+    padding: 16px;
+    font-size: 18px;
+    letter-spacing: normal;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.take-survey-content-button-subtitle {
+    font-size: 11px;
+    letter-spacing: normal;
+    color: white;
+    font-weight: 700;
+}
+
+@media screen and (max-width: 749px) {
+    .take-survey-content-heading {
+        font-size: 28px;
+        width: 30rem;
+        line-height: 32px;
+    }
+    .take-survey-content {
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+    }
+    .take-servey-heading-special-text {
+        transform: rotate(-6.13deg);
+        margin-bottom: -18px;
+    }
+    .take-survey-content-subtitle {
+        font-size: 16px;
+        margin-top: 15px;
+        width: 29rem;
+    }
+    .take-survey-content-button {
+        width: 262px;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .take-survey-banner-text {
+        height: 43px;
+        width: 143px;
+        font-size: 12px;
+        padding: 1rem;
+    }
+    .take-survey-banner-wrapper {
+        right: -6%;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1023px) {
+    .take-survey-content-heading {
+        font-size: 21px;
+        width: 55rem;
+    }
+    .take-survey-banner-wrapper {
+        right: -9%;
+    }
+    .take-servey-heading-special-text {
+        font-size: 34px;
+    }
+    .take-survey-content-subtitle {
+        font-size: 11px;
+        width: 32rem;
+    }
+    .take-survey-content-button {
+        width: 225px;
+        height: 38px;
+        padding: 13px;
+        font-size: 12px;
+    }
+    .take-survey-content-button-subtitle {
+        font-size: 7px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .take-survey-banner-wrapper {
+        right: -6%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .take-survey-banner-wrapper {
+        right: 0%;
+    }
+}

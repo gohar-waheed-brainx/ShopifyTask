@@ -18,6 +18,14 @@
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_linkdln_link != blank -%}
+    <li class="list-social__item">
+      <a href="{{ settings.social_linkdln_link }}" class="link list-social__link">
+        {%- render 'icon-linkdln' -%}
+        <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_instagram_link != blank -%}
     <li class="list-social__item">
       <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
