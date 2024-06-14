@@ -40,8 +40,10 @@
               class="announcement-bar__link link link--text focus-inset animate-arrow"
             >
           {%- endif -%}
-          <p class="announcement-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
+          <p class="announcement-bar__message">
+            <span>{{ section.blocks.first.settings.text | escape }} 
+              <span class="announcement-bar__highlighted_text">{{ section.blocks.first.settings.highlight | escape }}</span>
+            </span>
             {%- if section.blocks.first.settings.link != blank -%}
               {% render 'icon-arrow' %}
             {%- endif -%}
@@ -99,11 +101,16 @@
                         class="announcement-bar__link link link--text focus-inset animate-arrow"
                       >
                     {%- endif -%}
-                    <p class="announcement-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
+                    <p class="announcement-bar__message">
+                      <span>
+                        {{ block.settings.text | escape }}
+                        <span class="announcement-bar__highlighted_text">
+                          {{ block.settings.highlight | escape }}
+                        </span>
+                      </span>
+                      {% comment %} {%- if block.settings.link != blank -%}
                         {% render 'icon-arrow' %}
-                      {%- endif -%}
+                      {%- endif -%} {% endcomment %}
                     </p>
                     {%- if block.settings.link != blank -%}
                       </a>
@@ -245,6 +252,12 @@
           "id": "text",
           "default": "Welcome to our store",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "text",
+          "id": "highlight",
+          "default": "Go To Site",
+          "label": "Highlighted Text"
         },
         {
           "type": "url",

@@ -1,0 +1,196 @@
+{{ 'section-coffee-subscription.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+  .coffee_sub_bg_container {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+  @media screen and (min-width: 750px) {
+    .coffee_sub_bg_container {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="coffee_sub_bg_container">
+  {% if section.settings.subtitle_icon != blank %}
+    {{ section.settings.subtitle_icon | image_url: width: 27 | image_tag: fetchpriority: fetch_priority }}
+  {% endif %}
+  {% if section.settings.subtitle_heading != blank %}
+    <h4 class="subtitle_heading">
+      {{ section.settings.subtitle_heading }}
+    </h4>
+  {% endif %}
+  {% if section.settings.coffee_sub_bg_img != blank %}
+    <div class="newsletter__wrapper__bg__container product_sub_bg_container">
+      {{ section.settings.coffee_sub_bg_img | image_url: width: 430 | image_tag: fetchpriority: fetch_priority }}
+    </div>
+  {% endif %}
+  {% if section.settings.heading != blank %}
+    <h2
+      class="inline-richtext newsletter-heading coffee_sub_heading"
+    >
+      {{ section.settings.heading }}
+    </h2>
+  {% endif %}
+  {% if section.settings.text != blank %}
+    <div
+      class="newsletter_subheading coffee_sub_text rte"
+    >
+      {{ section.settings.text }}
+    </div>
+  {% endif %}
+</div>
+
+<div
+    class="main-carousel"
+  >
+    {%- for product in section.settings.collection.products -%}
+      <div
+        class="carousel-cell"
+        style = "height: 437px"
+        id="Slide-{{ section.id }}-{{ forloop.index }}"
+        {{ block.shopify_attributes }}
+      >
+        <div class="products_content">
+          {%- if product.featured_media -%}
+            <div class="product_img_container">
+              {{
+                product.featured_media
+                | image_url: width: 341, height: 341
+                | image_tag: fetchpriority: fetch_priority
+              }}
+            </div>
+          {% endif %}
+          {% if product.title != blank %}
+            <p class="coffee_sub_heading1 client_testimonials_heading1">SUBSCRIBE & SAVE 15%</p>
+            <h3
+              class="coffee_sub_title_text card__heading card__heading__text"
+            >
+              {{ product.title | escape }}
+            </h3>
+          {% endif %}
+          {% if product.compare_at_price %}
+            <div class="product_sub_price__container">
+              <span class="visually-hidden visually-hidden--inline">
+                {{- 'products.product.price.sale_price' | t -}}
+              </span>
+              <span class="price-item price-item-text price-item--sale price-item--last coffee_sub_price">
+                {{ product.price | money }}
+              </span>
+              {%- unless product.price_varies == false and product.compare_at_price_varies %}
+                <span class="visually-hidden visually-hidden--inline">
+                  {{- 'products.product.price.regular_price' | t -}}
+                </span>
+                <span style="margin-top: 3rem">
+                  <s class="price-item regular_price_text price-item--regular">
+                    {% if settings.currency_code_enabled %}
+                      {{ product.compare_at_price | money_with_currency }}
+                    {% else %}
+                      {{ product.compare_at_price | money }}
+                    {% endif %}
+                  </s>
+                </span>
+              {%- endunless -%}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<div class="products_sub_button_container">
+    <button class="organicpedia-button products_sub_btn1">SAVE & SUBSCRIBEE- $32.99 →</button>
+    <button class="products_sub_btn2">BROWSE ALL PRODUCTS→</button>
+</div>
+
+{% style %}
+
+/* .carousel-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  border-radius: 5px;
+  counter-increment: carousel-cell;
+}
+
+/* cell number */
+.carousel-cell:before {
+  display: block;
+  text-align: center;
+  /* content: counter(carousel-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white; */
+} */
+{% endstyle %}
+{% schema %}
+{
+  "name": "Coffee Subscription",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "coffee_sub_bg_img",
+      "label": "Background Image"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Products"
+    },
+    {
+      "type": "image_picker",
+      "id": "subtitle_icon",
+      "label": "Subtitle Icon"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "subtitle_heading",
+      "default": "Subtitle Heading",
+      "label": "Subtitle Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Subscribe to our emails",
+      "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Be the first to know about new collections and exclusive offers.</p>",
+      "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 52
+    }
+  ],
+  "presets": [
+    {
+      "name": "Coffee Subscription"
+    }
+  ]
+}
+{% endschema %}

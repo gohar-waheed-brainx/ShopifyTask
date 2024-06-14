@@ -1,5 +1,25 @@
+:root {
+  --card-background: #FFFFFF;
+  --card-border-color: #EDEDED;
+}
+
+.multicolumn__title {
+  justify-content: center;
+}
+
 .multicolumn .title {
   margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--homepage-text-color);
+}
+
+.multicolumn-card__image {
+  height: 43px !important;
+  width: 113.44px !important;
+  top: 3px !important;
+  left: 25px !important;
 }
 
 .multicolumn.no-heading .title {
@@ -10,9 +30,31 @@
   margin-top: 0;
 }
 
+.multicolumn-card {
+  width: 172.81px;
+  height: 55px !important;
+}
+
 @media screen and (max-width: 749px) {
   .multicolumn .title-wrapper-with-link {
     margin-bottom: 3rem;
+  }
+  .multicolumn .title {
+    font-size: 24px;
+  }
+  .multicolumn-card__image {
+    height: 33px !important;
+    width: 83px !important;
+    top: 7px !important;
+    left: 19px !important;
+  }
+  .multicolumn-card {
+    width: 126px;
+    height: 53px !important;
+  }
+  .multicolumn-list {
+    column-gap: 0;
+    row-gap: 0;
   }
 }
 
@@ -30,13 +72,13 @@
   }
 }
 
-.multicolumn-card__image-wrapper--third-width {
+/* .multicolumn-card__image-wrapper--third-width {
   width: 33%;
 }
 
 .multicolumn-card__image-wrapper--half-width {
   width: 50%;
-}
+} */
 
 .multicolumn-list__item.center .multicolumn-card__image-wrapper:not(.multicolumn-card__image-wrapper--full-width),
 .multicolumn-list__item:only-child {
@@ -74,8 +116,9 @@
 }
 
 .multicolumn.background-primary .multicolumn-card {
-  background: rgb(var(--color-background))
-    linear-gradient(rgba(var(--color-foreground), 0.04), rgba(var(--color-foreground), 0.04));
+  background: var(--card-background);
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
 }
 
 .multicolumn-list h3 {
@@ -87,11 +130,11 @@
   margin: 0;
 }
 
-.multicolumn-card-spacing {
+/* .multicolumn-card-spacing {
   padding-top: 2.5rem;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
-}
+} */
 
 .multicolumn-card__info > :nth-child(2) {
   margin-top: 1rem;
@@ -111,6 +154,7 @@
   .multicolumn-list {
     margin: 0;
     width: 100%;
+    gap: 10px;
   }
 
   .multicolumn-list:not(.slider) {
@@ -119,11 +163,26 @@
   }
 }
 
-@media screen and (min-width: 750px) and (max-width: 989px) {
+@media screen and (min-width: 750px) and (max-width: 1024px) {
   .multicolumn-list:not(.slider) {
     padding-left: 5rem;
     padding-right: 5rem;
   }
+  .multicolumn-card__image {
+    height: 33px !important;
+    width: 83px !important;
+    top: 7px !important;
+    left: 19px !important;
+  }
+  .multicolumn-card {
+    width: 126px;
+    height: 53px !important;
+  }
+  /* .multicolumn-list {
+    margin: 0;
+    width: 100%;
+    gap: 10px;
+  } */
 }
 
 @media screen and (min-width: 750px) {

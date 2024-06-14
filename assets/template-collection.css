@@ -1,7 +1,23 @@
+.products_bg {
+  background: #F2F2F2;
+}
+
+.products_collection_headline {
+  font-size: 32px;
+  color: var(--homepage-text-color);
+  letter-spacing: normal;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
 @media screen and (max-width: 749px) {
   .collection .grid__item:only-child {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+  
+  .products_collection_headline {
+    font-size: 24px; 
   }
 }
 

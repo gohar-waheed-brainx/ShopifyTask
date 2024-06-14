@@ -1,0 +1,289 @@
+{{ 'section-organicpedia.css' | asset_url | stylesheet_tag }} 
+
+{%- style -%}
+  .organicpedia-background {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .organicpedia-background {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class= "organicpedia-background">
+    <div class= "organicpedia-background-image-wrapper">
+        {% if section.settings.organicpedia_background_bg_image != blank %}
+            {{
+                section.settings.organicpedia_background_bg_image
+                | image_url: width: 430
+                | image_tag: fetchpriority: fetch_priority
+            }}
+        {% endif %}
+    </div>
+    <div class= "organicpedia-content-container">
+        <div class= "organicpedia-content">
+            {% if section.settings.title !=blank %}
+                <h3 class= "organicpedia-title">
+                    {{ section.settings.title }}
+                </h3>
+            {% endif %}
+            {% if section.settings.headline-text-1 !=blank %}
+                <p class= "organicpedia-headline">
+                    {{ section.settings.headline-text-1 }}
+                </p>
+            {% endif %}
+            {% if section.settings.headline-text-2 !=blank %}
+                <p class= "organicpedia-headline-2">
+                    {{ section.settings.headline-text-2 }}
+                </p>
+            {% endif %}
+            {% if section.settings.button_label != blank %}
+                <div class= "organicpedia-button-container">
+                    <button class= "organicpedia-button">
+                        {{ section.settings.button_label }}
+                    </button>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class= "oragnicpedia-bg-2">
+        <div class="decoration-wrapper-relative">
+            <div class="organicpedia-decoration-wrapper">
+                <div class="organicpedia-left-decoration-image">
+                    {% if section.settings.organicpedia_left-decoration-image != blank %}
+                        {{
+                            section.settings.organicpedia_left-decoration-image
+                            | image_url: width: 210
+                            | image_tag: fetchpriority: fetch_priority
+                        }}
+                    {% endif %}
+                </div>
+                <div class="organicpedia-right-decoration-image">
+                    {% if section.settings.organicpedia_right-decoration-image != blank %}
+                        {{
+                            section.settings.organicpedia_right-decoration-image
+                            | image_url: width: 210
+                            | image_tag: fetchpriority: fetch_priority
+                        }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="mobile-decoration-image">
+            {% if section.settings.mobile-decoration-image != blank %}
+                {{
+                    section.settings.mobile-decoration-image
+                    | image_url: width: 360
+                    | image_tag: fetchpriority: fetch_priority
+                }}
+            {% endif %}
+        </div>
+        <div class= "organicpedia-sec2-content-container">
+            <div class="organicpedia-sec2-content">
+                {% if section.settings.sec2-title !=blank %}
+                {%- assign special_text = section.settings.sec2-special-text -%}
+                {%- assign heading_words = section.settings.sec2-title | split: ' ' -%}
+                {%- assign modified_heading = '' -%}
+        
+                {%- for word in heading_words -%}
+                    {%- if forloop.index == 2 -%}
+                        {%- assign modified_heading = modified_heading | append: ' <span class="organicpedia-sec2-special-text">' | append: special_text | append: '</span> ' | append: word -%}
+                    {%- else -%}
+                        {%- assign modified_heading = modified_heading | append: ' ' | append: word -%}
+                    {%- endif -%}
+                {%- endfor -%}
+                <p class="porganicpedia-sec2-title">
+                    {{ modified_heading | strip }}
+                </p>
+                {% endif %}
+                {% if section.settings.sec2-headline !=blank %}
+                    <p class= "porganicpedia-sec2-headline">
+                        {{ section.settings.sec2-headline }}
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+        <div class= "organicpedia-sec2-images">
+            {% for block in section.blocks %}
+                <div class= "organicpedia-sec2-images-content">
+                    {% if block.settings.image != blank %}
+                        <div class= "organicpedia-sec2-content-image-wrapper">
+                            {{
+                                block.settings.image
+                                | image_url: width: 350, height: 247
+                                | image_tag: fetchpriority: fetch_priority
+                            }}
+                        </div>
+                    {% endif %}
+                    {% if block.settings.block-heading != blank %}
+                        <p class= "organicpedia-sec2-content-heading">
+                            {{ block.settings.block-heading }}
+                        </p>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="organicpedia-sec2-content-container">
+          <div class= "organicpedia-sec2-button-container">
+            {% if section.settings.sec2_button_label != blank %}
+                <button class= "organicpedia-sec2-button">
+                    {{ section.settings.sec2_button_label }}
+                </button>
+            {% endif %}
+        </div>
+        <div class= "organicpedia-sec2-subtitle-container">
+            {% if section.settings.sec2_subtitle-text != blank %}
+                <span class= "organicpedia-sec2-subtitle">
+                    {% for i in (1..5) %}
+                        <span class="star-icon">&#9733;</span>
+                    {% endfor %}
+                <span style= "margin-left: 3px">   {{ section.settings.sec2_subtitle-text }} </span>
+                </span>
+            {% endif %}
+        </div>
+        </div>
+    </div>    
+</div>
+
+{% schema %}
+{
+  "name": "Organicpedia",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "organicpedia_background_bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "headline-text-1",
+      "default": "Headline Text 1 Will Be Here",
+      "label": "Headline 1"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "headline-text-2",
+        "default": "Headline Text 2 Will Be Here",
+        "label": "Headline 2"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "Button Text"
+    },
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+    },
+    {
+        "type": "image_picker",
+        "id": "organicpedia_left-decoration-image",
+        "label": "Left Decoration Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "organicpedia_right-decoration-image",
+        "label": "Right Decoration Image"
+    },
+    {
+        "type": "image_picker",
+        "id": "mobile-decoration-image",
+        "label": "Mobile Decoration Image"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "sec2-title",
+        "default": "Section 2 Title",
+        "label": "Section2 Title"
+    },
+    {
+        "type": "inline_richtext",
+        "id": "sec2-headline",
+        "default": "Section 2 Headline Text Will Be Here",
+        "label": "Section2 Headline"
+    },
+    {
+        "type": "text",
+        "id": "sec2-special-text",
+        "default": "'Joy'",
+        "label": "Section2 Special Text"
+    },
+    {
+        "type": "text",
+        "id": "sec2_button_label",
+        "default": "Section2 Button label",
+        "label": "Section2 Button Text"
+    },
+    {
+        "type": "url",
+        "id": "sec2_button_link",
+        "label": "Section2 Button Link"
+    },
+    {
+          "type": "text",
+          "id": "sec2_subtitle-text",
+          "default": "Text",
+          "label": "Section2 Subtitle Text"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "block-heading",
+          "default": "Heading",
+          "label": "Block Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Organicpedia"
+    }
+  ]
+}
+{% endschema %}

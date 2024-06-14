@@ -1,0 +1,186 @@
+
+.testimonials-background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.testimonials__wrapper__bg__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials__wrapper__bg__container img {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+}
+
+.client_testimonials_user_img_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials_heading_text {
+    font-size: 30px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin: 0 auto;
+    width: 38rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.client_testimonials_container {
+    margin-top: 4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7rem;
+    justify-content: center;
+}
+
+.client_testimonials_container_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.testimonials_slider {
+    width: 100%;
+}
+
+.client_testimonials_name_text {
+    font-size: 18px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.client_testimonials_heading1, .client_testimonials_heading2 {
+    font-size: 14px;
+    color: var(--homepage-color-red);
+    letter-spacing: normal;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+.client_testimonials_heading2 {
+    color: var(--homepage-text-color);
+    margin: 0 auto;
+    width: 58rem;
+    line-height: 24px;
+}
+
+.testimonials_rating_text {
+    color: var(--homepage-text-color) !important;
+    justify-content: center;
+    margin-top: 1rem;
+    /* margin-bottom: 2rem; */ */
+}
+
+.red-star-icon {
+    color: var(--homepage-color-red);
+}
+
+.client_testimonials_user_img_container img {
+    margin-top: -2rem;
+}
+
+@media screen and (max-width: 749px) {
+    .client_testimonials_container {
+      flex-direction: column;
+      gap: 0;
+      margin-top: 2rem;
+    }
+  
+    .client_testimonials_container > div {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .client_testimonials_container > div:first-child {
+      order: 2; /* Display image part first */
+    }
+    
+    .testimonials_heading_text {
+        font-size: 24px;
+        width: 29rem;
+    }
+    .testimonials__wrapper__bg__container img {
+        top: -4%;
+    }
+    .client_testimonials_user_img_container img {
+        width: 205px !important;
+        height: 134px;
+        margin-top: 0rem;
+    }
+    .client_testimonials_name_text {
+        font-size: 14px;
+    }
+    .client_testimonials_heading1 {
+        font-size: 12px;
+    }
+    .testimonials_slider {
+        width: 36rem
+    }
+    .client_testimonials_heading2 {
+        width: 29rem;
+        font-size: 12px;
+        line-height: 19px;
+    }
+    .testimonials_rating_text {
+        display: flex !important;
+    }
+    .client_product_img img {
+        width: 260px;
+        height: 200px;
+    }
+    .testimonials-background {
+        margin-top: 45px !important;
+        margin-bottom: 9px !important;
+    }
+
+    .testomonials-slider-button {
+        align-items: start !important;
+    }
+
+    .testimonial-slider-button {
+        margin-top: 7rem !important;
+    }
+    .testimonials_rating_text {
+        margin-top: 1px !important;
+    }
+}
+
+@media screen and (min-width: 750px ) and (max-width: 1279px) {
+    .client_testimonials_container {
+        flex-direction: column;
+        gap: 0;
+      }
+    
+      .client_testimonials_container > div {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    
+      .client_testimonials_container > div:first-child {
+        order: 2; /* Display image part first */
+      }
+      .client_testimonials_user_img_container img {
+        width: 322px !important;
+        height: 296px;
+    }
+    .testimonials_rating_text {
+        margin-top: 1px !important;
+    }
+    .client_testimonials_heading2 {
+        line-height: 26px;
+    }
+}

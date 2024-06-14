@@ -1,0 +1,187 @@
+{{ 'section-users-served.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .users-served-background {
+    margin-top: {{ section.settings.margin_top | times: 0.75 | round: 0 }}px;
+    margin-bottom: {{ section.settings.margin_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .users-served-background {
+      margin-top: {{ section.settings.margin_top }}px;
+      margin-bottom: {{ section.settings.margin_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class = "users-served-background">
+    <div class= "background-image-wrapper">
+        {% if section.settings.bg-image != blank%}
+            {{
+                section.settings.bg-image
+                | image_url: width: 430
+                | image_tag: fetchpriority: fetch_priority
+            }}
+        {% endif %}
+    </div>
+    <div class = "users-served-content-container">
+        <div class= "users-served-content">
+            {% if section.settings.title !=blank %}
+                <h3 class= "users-served-title">
+                    {{ section.settings.title }}
+                </h3>
+            {% endif %}
+            {% if section.settings.headline-text !=blank %}
+                <p class= "users-served-headline">
+                    {{ section.settings.headline-text }}
+                </p>
+            {% endif %}
+        </div>
+        <div class= "users-served-sold-count">
+            {% for block in section.blocks %}
+                {% if block.settings.image != blank %}
+                    <div class= "content-image-wrapper">
+                        {{
+                            block.settings.image
+                            | image_url: width: 277
+                            | image_tag: fetchpriority: fetch_priority
+                        }}
+                        {% if block.settings.block-heading != blank %}
+                            <p class= "users-served-block-heading">
+                                {{ block.settings.block-heading }}
+                            </p>
+                        {% endif %}
+                        {% if block.settings.block-text != blank %}
+                            <p class= "users-served-block-text">
+                                {{ block.settings.block-text }}
+                            </p>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class= "users-served-button-container">
+            {% if section.settings.button_label != blank %}
+                <button class= "users-served-button">
+                    {{ section.settings.button_label }}
+                </button>
+            {% endif %}
+        </div>
+        <div class= "users-served-subtitle-container">
+            {% if section.settings.subtitle-text != blank %}
+                <span class= "users-served-subtitle">
+                    {% for i in (1..5) %}
+                        <span class="star-icon">&#9733;</span>
+                    {% endfor %}
+                    <span style= "margin-left: 3px"> {{ section.settings.subtitle-text }} </span>
+                </span>
+            {% endif %}
+        </div>
+</div>
+
+{% schema %}
+{
+  "name": "Users Served Section",
+  "class": "section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg-image",
+      "label": "Background Image"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "title",
+      "default": "Title",
+      "label": "Title"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "headline-text",
+      "default": "Headline Text Will Be Here",
+      "label": "Headline"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Button label",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+        "type": "text",
+        "id": "subtitle-text",
+        "default": "Text",
+        "label": "Subtitle Text"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Margin Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "t:sections.multicolumn.blocks.column.name",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "block-heading",
+          "default": "Heading",
+          "label": "Block Heading"
+        },
+        {
+          "type": "text",
+          "id": "block-text",
+          "default": "Block Text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Users Served Section",
+      "blocks": [
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        },
+        {
+          "type": "column"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+

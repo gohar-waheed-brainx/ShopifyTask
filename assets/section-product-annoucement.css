@@ -1,0 +1,193 @@
+
+
+.product-annoucements-background {
+    height: auto;
+    position: relative;
+}
+
+.product-annoucements-background-image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    z-index: 1;
+}
+
+.prod-annoucements-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the content is positioned relative to the background */
+    z-index: 1;
+    width: 976px;
+    margin: 0 auto;
+}
+
+.prod-annoucements-deals-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.prod-annoucements-title {
+    font-size: 36px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+}
+
+.prod-annoucements-headline {
+    font-size: 18px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-top: -17px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 78rem;
+}
+
+.prod-annoucements-headline-2 {
+    font-size: 18px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-left: auto;
+    margin-right: auto;
+    width: 88rem;
+}
+
+.prod-annoucements-content {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.prod-annoucements-deals {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.prod-annoucements-content-image-wrapper {
+    position: relative;
+}
+
+.prod-annoucements-content-heading {
+    font-size: 20px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-top: 0;
+}
+
+.prod-annoucements-content-text {
+    font-size: 15px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-top: -15px;
+    width: 37rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.prod-annoucements-button-container {
+    margin-top: 0;
+}
+
+.prod-annoucements-button {
+    width: 347px;
+    height: 50px;
+    /* border: 1px solid transparent; */
+    box-shadow: none;
+    border: none;
+    background-color: var(--homepage-color-red);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600 !important;
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: normal;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 749px) {
+    .product-annoucements-background-image-wrapper {
+        top: 0;
+        left: 0;
+    }
+    /* .users-served-content {
+        text-align: left;
+    } */
+    .prod-annoucements-title {
+        font-size: 24px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 366px;
+    }
+    .prod-annoucements-content-container {
+        width: auto;
+    }
+    .prod-annoucements-headline, .prod-annoucements-headline-2 {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 348px;
+    }
+    .prod-annoucements-content-image-wrapper img {
+        width: 343px;
+        height: 233px;
+    }
+
+    .prod-annoucements-content-heading {
+        font-size: 18px;
+    }
+
+    .prod-annoucements-content-text {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 322px;
+    }
+    .prod-annoucements-button {
+        width: 341px;
+        font-size: 13px;
+        height: 45px;
+        font-weight: 800;
+    }
+    .prod-annoucements-deals {
+        gap: 3rem;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+    .prod-annoucements-title {
+        font-size: 24px;
+    }
+    .prod-annoucements-content-container {
+        width: auto;
+    }
+    .prod-annoucements-headline, .prod-annoucements-headline-2 {
+        font-size: 14px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 59rem;
+    }
+    .prod-annoucements-content-image-wrapper img {
+        width: 343px;
+        height: 233px;
+    }
+
+    .prod-annoucements-content-heading {
+        font-size: 18px;
+    }
+
+    .prod-annoucements-content-text {
+        font-size: 14px;
+    }
+    .prod-annoucements-button {
+        width: 326px;
+        font-size: 13px;
+        height: 45px;
+        font-weight: 800;
+    }
+}

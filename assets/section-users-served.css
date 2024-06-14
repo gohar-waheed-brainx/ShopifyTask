@@ -1,0 +1,209 @@
+:root {
+    --users-served-bg: #F2F2F2;
+}
+
+.users-served-background {
+    background: var(--users-served-bg);
+    height: auto;
+    position: relative;
+}
+
+.background-image-wrapper {
+    position: absolute;
+    top: 3%;
+    left: 35%;
+    z-index: 1;
+}
+
+.users-served-subtitle {
+    font-size: 11px;
+    letter-spacing: normal;
+    color: var(--homepage-text-color);
+    font-weight: 700;
+}
+.users-served-subtitle-container {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.users-served-star-icon {
+    color: var(--special-text);
+}
+
+.content-image-wrapper {
+    position: relative;
+}
+
+.users-served-button {
+    width: 375px;
+    height: 50px;
+    /* border: 1px solid transparent; */
+    box-shadow: none;
+    border: none;
+    background-color: var(--homepage-color-red);
+    border-radius: 5px;
+    color: white;
+    font-weight: 600 !important;
+    padding: 16px;
+    font-size: 16px;
+    letter-spacing: normal;
+    cursor: pointer;
+    margin-top: -2rem;
+}
+
+.users-served-button-container {
+    margin-top: 5rem;
+}
+
+.users-served-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure the content is positioned relative to the background */
+    z-index: 1;
+    width: 995px;
+    margin: 0 auto;
+}
+
+.users-served-content {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.users-served-title {
+    font-size: 30px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+}
+
+.users-served-headline {
+    font-size: 18px;
+    color: var(--homepage-text-color);
+    letter-spacing: normal;
+    margin-top: -1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 88rem;
+}
+
+.users-served-block-heading {
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 57px;
+    color: var(--image-background);
+    letter-spacing: normal;
+    text-align: center;
+    z-index: 2; /* Ensure the text appears above the image */
+    font-weight: 400;
+}
+
+.users-served-block-text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: normal;
+    text-align: center;
+    z-index: 2; /* Ensure the text appears above the image */
+    font-size: 19px;
+    width: 195px;
+}
+
+.users-served-sold-count {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    margin-top: -3rem;
+}
+
+@media screen and (max-width: 749px) {
+    .background-image-wrapper {
+        top: 0;
+        left: 0;
+    }
+    /* .users-served-content {
+        text-align: left;
+    } */
+    .users-served-title {
+        font-size: 24px;
+    }
+    .users-served-content-container {
+        width: auto;
+    }
+    .users-served-headline{
+        font-size: 16px;
+        width: 361px;
+        margin: 0 auto;
+    }
+    .users-served-block-heading {
+        font-size: 48px;
+    }
+    .users-served-block-text {
+        font-size: 16px;
+        width: 152px;
+    }
+    .content-image-wrapper img {
+        width: 213px;
+        height: 209px;
+    }
+    .users-served-block-heading {
+        top: 13%;
+        left: 53%;
+    }
+    .users-served-sold-count {
+        gap: 1rem;
+    }
+    .users-served-background {
+        height: auto;
+        overflow-x: hidden;
+    }
+    .users-served-button {
+        width: 349px;
+        font-size: 15px;
+        height: 45px;
+        padding: 14px;
+    }
+    .users-served-subtitle {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 989px) {
+    /* .background-image-wrapper {
+        top: 0;
+        left: 0;
+    } */
+    /* .users-served-content {
+        text-align: left;
+    } */
+    .users-served-headline {
+        font-size: 16px;
+    }
+    .users-served-content-container {
+        width: auto;
+    }
+    .users-served-block-heading {
+        font-size: 48px;
+    }
+    .content-image-wrapper img {
+        width: 213px;
+        height: 209px;
+    }
+    .users-served-block-heading {
+        top: 13%;
+        left: 53%;
+    }
+    .users-served-sold-count {
+        gap: 3rem;
+    }
+    .users-served-block-text {
+        font-size: 16px;
+        width: 152px;
+        top: 54%;
+    }
+}
